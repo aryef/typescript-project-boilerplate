@@ -1,0 +1,9 @@
+npx gitignore node
+yarn init --yes
+yarn add -D typescript eslint jest
+
+# change package.json -- especially "scripts" and "types"
+
+volta pin node yarn   // pin last stable versions of node and yarn
+
+git init
