@@ -2,8 +2,49 @@ npx gitignore node
 yarn init --yes
 yarn add -D typescript eslint jest
 
-# change package.json -- especially "scripts" and "types"
+# config package.json -- especially "scripts" and "types"
 
 volta pin node yarn   // pin last stable versions of node and yarn
 
 git init
+git add -A
+git commit -m "initial commit"
+
+yarn tsc --init
+
+// config tsconfig.json
+
+yarn eslint --init
+
+    -- check syntax and find problems
+    -- type of modules: None
+    -- which framework: none (react?)
+    -- does your project use Typescript: Yes
+    -- where code runs: Node/Browser
+    -- format config: json
+    -- install dependencies with npm: Yes
+
+delete package.json
+
+yarn
+
+configure .eslintrc.json
+
+create tsconfig.eslint.json
+
+yarn lint
+
+yarn add -D jest @types/jest @babel/core @babel/preset-env @babel/preset-typescript
+
+mkdir tests
+
+add file index.test.ts
+
+configure .babelrc, tests/tsconfig.json
+
+
+yarn lint
+
+yarn build
+
+yarn test
