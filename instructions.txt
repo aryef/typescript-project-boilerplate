@@ -48,3 +48,6 @@ yarn lint
 yarn build
 
 yarn test
+
+git remote add gitlab12_web_ts_boilerplate http://10.100.102.104:10080/web/typescript-project-boilerplate.git
+git push -u gitlab12_web_ts_boilerplate -all
