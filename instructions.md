@@ -92,3 +92,7 @@ yarn api-extractor run --local
      yarn api-extractor run --local
 
 -- yarn api-extractor run   ==> helps to detect public api changes (will fail if API changed)
+
+## Api Documenter
+
+yarn api-documenter markdown -i temp -o docs
