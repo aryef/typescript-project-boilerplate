@@ -70,4 +70,7 @@ yarn api-extractor run --local
 
 (add temp to .gitignore and exclude from file folders)
 
-
+--- after updating ts source code
+--should run:
+     yarn build
+     yarn api-extractor run --local
