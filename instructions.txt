@@ -50,4 +50,24 @@ yarn build
 yarn test
 
 git remote add gitlab12_web_ts_boilerplate http://10.100.102.104:10080/web/typescript-project-boilerplate.git
-git push -u gitlab12_web_ts_boilerplate -all
+git push -u gitlab12_web_ts_boilerplate --all
+git push -u gitlab12_web_ts_boilerplate --tags
+
+###############
+
+API-EXTRACTOR
+
+yarn add -D @microsoft/api-extractor @microsoft/api-documenter
+
+yarn api-extractor init
+
+modify api-extractor.json
+
+mkdir etc 
+(where api report will be placed)
+
+yarn api-extractor run --local
+
+(add temp to .gitignore and exclude from file folders)
+
+
