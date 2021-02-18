@@ -1,18 +1,33 @@
+# Create Typescript Project from Scratch
+
+## Init
+
 npx gitignore node
 yarn init --yes
 yarn add -D typescript eslint jest
 
-# config package.json -- especially "scripts" and "types"
+## config package.json
+
+    * "scripts"
+    * "types"
+
+## Volta Pin
 
 volta pin node yarn   // pin last stable versions of node and yarn
+
+## Git
 
 git init
 git add -A
 git commit -m "initial commit"
 
+## typescript initialization
+
 yarn tsc --init
 
 // config tsconfig.json
+
+## Eslint initialization
 
 yarn eslint --init
 
@@ -24,7 +39,7 @@ yarn eslint --init
     -- format config: json
     -- install dependencies with npm: Yes
 
-delete package.json
+delete package.json.lock
 
 yarn
 
@@ -34,6 +49,8 @@ create tsconfig.eslint.json
 
 yarn lint
 
+## Configure Jest
+
 yarn add -D jest @types/jest @babel/core @babel/preset-env @babel/preset-typescript
 
 mkdir tests
@@ -42,20 +59,19 @@ add file index.test.ts
 
 configure .babelrc, tests/tsconfig.json
 
-
 yarn lint
 
 yarn build
 
 yarn test
 
-git remote add gitlab12_web_ts_boilerplate http://10.100.102.104:10080/web/typescript-project-boilerplate.git
+## Add git remote
+
+git remote add gitlab12_web_ts_boilerplate <http://10.100.102.104:10080/web/typescript-project-boilerplate.git>
 git push -u gitlab12_web_ts_boilerplate --all
 git push -u gitlab12_web_ts_boilerplate --tags
 
-###############
-
-API-EXTRACTOR
+## Add Api-Extractor
 
 yarn add -D @microsoft/api-extractor @microsoft/api-documenter
 
@@ -63,14 +79,16 @@ yarn api-extractor init
 
 modify api-extractor.json
 
-mkdir etc 
+mkdir etc
 (where api report will be placed)
 
 yarn api-extractor run --local
 
-(add temp to .gitignore and exclude from file folders)
+(add temp to .gitignore )
 
 --- after updating ts source code
 --should run:
      yarn build
      yarn api-extractor run --local
+
+-- yarn api-extractor run   ==> helps to detect public api changes (will fail if API changed)
